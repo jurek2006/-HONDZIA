@@ -1,0 +1,59 @@
+/*
+Theme Name: Hondzia-Sentio 0.1
+Author: Jurek Skowron
+Author URI: http://jurekskowron.pl
+Description: Motyw dla strony hondzia.pl. Motyw potomny 
+
+Version: 0.1
+
+Template: sentio
+*/
+@import url("../sentio/style.css");
+/* line 17, ../sass/style.scss */
+body {
+  font-size: 1em;
+}
+
+/* line 22, ../sass/style.scss */
+body, h1, h2, h3, h4, h5, h6, h7, .font-alpha {
+  font-family: 'Alegreya Sans', sans-serif;
+  font-weight: 500;
+}
+
+/* line 27, ../sass/style.scss */
+h1, h2, h3, h4, h5, h6, h7, .font-alpha {
+  font-weight: 800;
+}
+
+/* line 33, ../sass/style.scss */
+article {
+  color: black;
+}
+
+/* line 38, ../sass/style.scss */
+article, div.dh-widget, div.comment-respond, div.post-prev, div.post-next {
+  background-color: rgba(255, 255, 255, 0.9) !important;
+}
+
+/* line 43, ../sass/style.scss */
+section.header-nav h4.text-delta {
+  display: none;
+}
+
+/* line 49, ../sass/style.scss */
+p.comment-awaiting-moderation {
+  font-weight: 800;
+  color: red;
+  margin-left: 8em;
+}
+
+/* line 56, ../sass/style.scss */
+span.required {
+  color: red !important;
+}
+
+/*stopka - ukrycie informacji Copyright*/
+/* line 61, ../sass/style.scss */
+section.copyright-stuff {
+  display: none;
+}

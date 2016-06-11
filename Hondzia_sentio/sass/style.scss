@@ -1,0 +1,66 @@
+@charset "utf-8";
+/*
+Theme Name: Hondzia-Sentio 0.1
+Author: Jurek Skowron
+Author URI: http://jurekskowron.pl
+Description: Motyw dla strony hondzia.pl. Motyw potomny 
+
+Version: 0.1
+
+Template: sentio
+*/
+
+// Wczytanie CSS z motywu bazowego
+@import url('../sentio/style.css');
+
+// Zmiana czcionki
+body{
+	font-size: 1em;
+}
+
+// .font-alpha to tekst na nagłówku 'hondzia.pl'
+body, h1, h2, h3, h4, h5, h6, h7, .font-alpha{
+	font-family: 'Alegreya Sans', sans-serif;
+	font-weight: 500; //standardowy tekst, wgrane także 800 dla bold
+}
+
+h1, h2, h3, h4, h5, h6, h7, .font-alpha{
+	font-weight: 800; //pogrubiony tekst
+
+}
+
+//Zmiana koloru tekstu - dla większego kontrastu
+article{
+	color: black;
+}
+
+//kolor tła artykułu, komentarzy i widżetów bocznych, poprzedni i następny post
+article, div.dh-widget, div.comment-respond, div.post-prev, div.post-next{
+	background-color: rgba(255,255,255,0.9) !important;
+}
+
+//ukrycie podpisu strony pod logiem
+section.header-nav h4.text-delta{
+	display: none;
+
+}
+
+//Część odpowiadająca za fragment "Twój komentarz oczekuje na moderację."
+p.comment-awaiting-moderation{
+	font-weight: 800;
+	color: red;
+	margin-left: 8em;
+}
+
+// Kolor gwiazdki przy polach "wymagane" formularza komentarzy
+span.required{
+	color: red !important;
+}
+
+/*stopka - ukrycie informacji Copyright*/
+section.copyright-stuff{
+	display: none;
+}
+
+
+
