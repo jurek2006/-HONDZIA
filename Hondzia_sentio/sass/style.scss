@@ -10,6 +10,15 @@ Version: 0.1
 Template: sentio
 */
 
+// KOLORY
+$box-tlo: rgba(#FFF,0.9); //kolor tła "boxów" czyli artykułów, widżetów itd. z uwzględnieniem przezroczystości
+$widget-kolor-obramowania: #CCC;
+$widget-grubosc-obramowania: 2px;
+
+// TEKST
+$font-weight-normal: 500; //standardowy tekst, wgrane także 800 dla bold
+$font-weight-bold: 800; //pogrubiony tekst
+
 // Wczytanie CSS z motywu bazowego
 @import url('../sentio/style.css');
 
@@ -34,11 +43,11 @@ body{
 body, h1, h2, h3, h4, h5, h6, h7, .font-alpha{
 	// Zmiana czcionki
 	font-family: 'Alegreya Sans', sans-serif;
-	font-weight: 500; //standardowy tekst, wgrane także 800 dla bold
+	font-weight: $font-weight-normal; 
 }
 
 h1, h2, h3, h4, h5, h6, h7, .font-alpha{
-	font-weight: 800; //pogrubiony tekst
+	font-weight: $font-weight-bold; 
 
 }
 
@@ -49,7 +58,13 @@ article{
 
 //kolor tła artykułu, komentarzy i widżetów bocznych, poprzedni i następny post
 article, div.dh-widget, div.comment-respond, div.post-prev, div.post-next{
-	background-color: rgba(255,255,255,0.9) !important;
+	background-color: $box-tlo !important;
+}
+
+// obramowanie dla widżetów
+div.dh-widget{
+	outline: $widget-grubosc-obramowania $widget-kolor-obramowania solid !important; 
+
 }
 
 //ukrycie podpisu strony pod logiem
@@ -60,7 +75,7 @@ section.header-nav h4.text-delta{
 
 //Część odpowiadająca za fragment "Twój komentarz oczekuje na moderację."
 p.comment-awaiting-moderation{
-	font-weight: 800;
+	font-weight: $font-weight-bold;
 	color: red;
 	margin-left: 8em;
 }
@@ -75,33 +90,7 @@ section.copyright-stuff{
 	display: none;
 }
 
-// TESTOWE
-body{
-	// background-image: url("img/bg_org.jpg") !important; 
-	// background-position: left -1400px !important; 
 
 
 
-	// @include MQ(xs){
-	// 	// styl dla rodzielczości większej niż $xxs
-	// 	background-color: blue;
-	// }
-
-	// @include MQ(sm){
-	// 	// styl dla rodzielczości większej niż $xs
-	// 	background-color: red;
-	// }
-
-	@include MQonly(md){
-		// styl dla rodzielczości większej niż $sm (992 - 1200)
-		// background-position: -200px -1400px !important;
-	}
-
-	// @include MQ(lg){
-	// 	// styl dla rodzielczości większej niż $md
-	// 	background-color: yellow;
-	// }
-
-}
-// -------
 
