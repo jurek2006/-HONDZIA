@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*
 Theme Name: Hondzia-Sentio 0.1
 Author: Jurek Skowron
@@ -9,51 +10,62 @@ Version: 0.1
 Template: sentio
 */
 @import url("../sentio/style.css");
-/* line 17, ../sass/style.scss */
-body {
-  font-size: 1em;
+/* line 16, ../sass/style.scss */
+* {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
 }
 
-/* line 22, ../sass/style.scss */
+/*================MEDIA QUERIES za pomoc─ů sass==================================*/
+/*================koniec MEDIA QUERIES za pomoc─ů sass===========================*/
+/* line 26, ../sass/style.scss */
+body {
+  font-size: 1em;
+  background-image: url("img/bg_long.jpg") !important;
+  background-position: center top !important;
+}
+
+/* line 34, ../sass/style.scss */
 body, h1, h2, h3, h4, h5, h6, h7, .font-alpha {
   font-family: 'Alegreya Sans', sans-serif;
   font-weight: 500;
 }
 
-/* line 27, ../sass/style.scss */
+/* line 40, ../sass/style.scss */
 h1, h2, h3, h4, h5, h6, h7, .font-alpha {
   font-weight: 800;
 }
 
-/* line 33, ../sass/style.scss */
+/* line 46, ../sass/style.scss */
 article {
   color: black;
 }
 
-/* line 38, ../sass/style.scss */
+/* line 51, ../sass/style.scss */
 article, div.dh-widget, div.comment-respond, div.post-prev, div.post-next {
   background-color: rgba(255, 255, 255, 0.9) !important;
 }
 
-/* line 43, ../sass/style.scss */
+/* line 56, ../sass/style.scss */
 section.header-nav h4.text-delta {
   display: none;
 }
 
-/* line 49, ../sass/style.scss */
+/* line 62, ../sass/style.scss */
 p.comment-awaiting-moderation {
   font-weight: 800;
   color: red;
   margin-left: 8em;
 }
 
-/* line 56, ../sass/style.scss */
+/* line 69, ../sass/style.scss */
 span.required {
   color: red !important;
 }
 
 /*stopka - ukrycie informacji Copyright*/
-/* line 61, ../sass/style.scss */
+/* line 74, ../sass/style.scss */
 section.copyright-stuff {
   display: none;
 }

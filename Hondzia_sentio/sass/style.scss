@@ -13,13 +13,26 @@ Template: sentio
 // Wczytanie CSS z motywu bazowego
 @import url('../sentio/style.css');
 
-// Zmiana czcionki
+* {box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box;  }
+
+// LEGENDA:
+// - TESTOWE - dopisek przy wpisach jedynie testowych
+// - KONF - dopisek przy zmiennych konfiguracyjnych "w treści"
+
+// WCZYTANIE INNYCH PLIKÓW SCSS
+@import "mediaQueries"; //plik _mediaQueries.scss zawierający MQ i MQonly
+
+
 body{
 	font-size: 1em;
+	// tło strony
+	background-image: url("img/bg_long.jpg") !important;
+	background-position: center top !important;
 }
 
 // .font-alpha to tekst na nagłówku 'hondzia.pl'
 body, h1, h2, h3, h4, h5, h6, h7, .font-alpha{
+	// Zmiana czcionki
 	font-family: 'Alegreya Sans', sans-serif;
 	font-weight: 500; //standardowy tekst, wgrane także 800 dla bold
 }
@@ -62,5 +75,33 @@ section.copyright-stuff{
 	display: none;
 }
 
+// TESTOWE
+body{
+	// background-image: url("img/bg_org.jpg") !important; 
+	// background-position: left -1400px !important; 
 
+
+
+	// @include MQ(xs){
+	// 	// styl dla rodzielczości większej niż $xxs
+	// 	background-color: blue;
+	// }
+
+	// @include MQ(sm){
+	// 	// styl dla rodzielczości większej niż $xs
+	// 	background-color: red;
+	// }
+
+	@include MQonly(md){
+		// styl dla rodzielczości większej niż $sm (992 - 1200)
+		// background-position: -200px -1400px !important;
+	}
+
+	// @include MQ(lg){
+	// 	// styl dla rodzielczości większej niż $md
+	// 	background-color: yellow;
+	// }
+
+}
+// -------
 
