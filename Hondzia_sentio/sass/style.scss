@@ -90,6 +90,28 @@ section.copyright-stuff{
 	display: none;
 }
 
+// Przycisk "odpowiedz" - rozwiązanie problemu, że dla wąskich rozdzielczości mobilnych przycisk "Odpowiedz" wchodzi na info o komentarzu
+
+// Standardowe, dla małych rozdzielczości
+a.comment-reply-link{
+	position: relative;
+	background: #FFF;
+	margin-left: 2.5em !important;
+	top: -0.8em !important;
+}
+
+@include MQ(sm){
+	// styl dla rodzielczości sm i większych (powyżej 768px)
+	// Przycisk "Odpowiedz" we wpisie
+	a.comment-reply-link{
+		position: absolute;
+		background: #FFF;
+		margin-left: 0 !important;
+		top: 1.5em !important;
+	}
+	
+}
+
 
 
 

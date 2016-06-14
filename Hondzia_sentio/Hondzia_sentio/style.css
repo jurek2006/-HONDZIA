@@ -74,3 +74,21 @@ span.required {
 section.copyright-stuff {
   display: none;
 }
+
+/* line 96, ../sass/style.scss */
+a.comment-reply-link {
+  position: relative;
+  background: #FFF;
+  margin-left: 2.5em !important;
+  top: -0.8em !important;
+}
+
+@media only screen and (min-width: 768px) {
+  /* line 106, ../sass/style.scss */
+  a.comment-reply-link {
+    position: absolute;
+    background: #FFF;
+    margin-left: 0 !important;
+    top: 1.5em !important;
+  }
+}
