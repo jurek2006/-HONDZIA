@@ -92,3 +92,10 @@ a.comment-reply-link {
     top: 1.5em !important;
   }
 }
+@media only screen and (max-width: 399px) {
+  /* line 117, ../sass/style.scss */
+  div.comment-content {
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+}

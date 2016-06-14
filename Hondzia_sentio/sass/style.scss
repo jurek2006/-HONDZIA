@@ -112,6 +112,16 @@ a.comment-reply-link{
 	
 }
 
+// Dla małych rozdzielczości (xxs < 400px) komentarz jest na całą szerokośc pola komentarza
+@include MQonly(xxs){
+	div.comment-content{
+
+		padding-left: 1em;
+		padding-right: 1em; 
+
+	}
+}
+
 
 
 
